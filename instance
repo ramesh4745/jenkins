@@ -18,11 +18,8 @@ pipeline {
 	
 	stage('Auth-Project') {
 	 steps {
-		 dir('jenkins')
-		 {
     
         sh 'gcloud auth activate-service-account  ramesh@test-proj08.iam.gserviceaccount.com --key-file=ramesh.json'
-    }
     }
 	}
  	 

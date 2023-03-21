@@ -4,8 +4,7 @@ pipeline {
     environment {
     SVC_ACCOUNT_KEY = credentials('id-auth')
   }
-     
-    stages {
+     stages {
       	stage('Set creds') {
             steps {
               
@@ -14,9 +13,8 @@ pipeline {
                
             }
         }
-
-	
-	stage('Auth-Project') {
+	stage('Auth-Project') 
+	{
 	 steps {
     
         sh 'gcloud auth activate-service-account  ramesh@test-proj08.iam.gserviceaccount.com --key-file=ramesh.json'
